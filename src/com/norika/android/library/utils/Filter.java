@@ -3,6 +3,6 @@ package com.norika.android.library.utils;
 
 public interface Filter {
 
-    public String doFilter(String msg);
+    void doFilter(Request request, Response response, FilterChain chain);
 
 }

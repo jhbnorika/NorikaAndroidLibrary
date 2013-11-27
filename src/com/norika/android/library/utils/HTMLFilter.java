@@ -1,17 +1,16 @@
 
 package com.norika.android.library.utils;
 
-import android.text.TextUtils;
-
 public class HTMLFilter implements Filter {
 
     @Override
-    public String doFilter(String msg) {
-        if (TextUtils.isEmpty(msg))
-            return msg;
+    public void doFilter(Request request, Response response, FilterChain chain) {
+        request.setRequestStr(request.getRequestStr().replace("<", "[")
+                .replace(">", "] --------HTMLFilter"));
 
-        // 处理HMTL tag
-        return msg.replace("<", "[").replace(">", "]");
+        chain.doFilter(request, response, chain);
+
+        response.setResponseStr(response.getResponseStr() + "--------HTMLFilter");
     }
 
 }
