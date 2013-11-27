@@ -1,9 +1,8 @@
 
 package com.norika.android.library.utils;
 
-public class FilterChain implements Filter {
+public class FilterChain {
 
-    @Override
     public void doFilter(Request request, Response response, FilterChain chain) {
 
     }
