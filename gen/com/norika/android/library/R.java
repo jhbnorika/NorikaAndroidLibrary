@@ -15,6 +15,7 @@ public final class R {
     }
     public static final class string {
         public static int app_name=0x7f030000;
+        public static int no_network_connection_toast=0x7f030001;
     }
     public static final class style {
         /** 
