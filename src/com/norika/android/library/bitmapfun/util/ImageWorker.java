@@ -32,6 +32,7 @@ import android.util.Log;
 import android.widget.ImageView;
 
 import com.norika.android.library.BuildConfig;
+import com.norika.android.library.utils.Utils;
 
 /**
  * This class wraps up completing some arbitrary long running work when loading

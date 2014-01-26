@@ -1,4 +1,4 @@
-package com.norika.android.library.bitmapfun.base;
+package com.norika.android.library.base;
 
 import android.support.v4.app.FragmentActivity;
 

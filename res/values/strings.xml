@@ -1,6 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">NorikaAndroidLibrary</string>
-    <string name="no_network_connection_toast">No network connection found</string>
+    <!-- common -->
+    <string name="no_network_connection_toast_lan">无效的网络</string>
+    <string name="cancel_lan">取消</string>
+    <string name="confirm_lan">确认</string>
+    <string name="no_network_connection_toast">@string/no_network_connection_toast_lan</string>
+    <string name="cancel">@string/cancel_lan</string>
+    <string name="confirm">@string/confirm_lan</string>
+    <!-- beauty dialog -->
+    <string name="dialog_prompt_lan">提示</string>
+    <string name="dialog_prompt_hint_lan">提示详情</string>
+    <string name="dialog_not_alert_lan">不再提醒</string>
+    <string name="dialog_prompt">@string/dialog_prompt_lan</string>
+    <string name="dialog_prompt_hint">@string/dialog_prompt_hint_lan</string>
+    <string name="dialog_not_alert">@string/dialog_not_alert_lan</string>
 
 </resources>

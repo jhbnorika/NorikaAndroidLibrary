@@ -27,6 +27,7 @@ import android.os.Build;
 import android.util.Log;
 
 import com.norika.android.library.BuildConfig;
+import com.norika.android.library.utils.Utils;
 
 /**
  * A simple subclass of {@link ImageWorker} that resizes images from resources

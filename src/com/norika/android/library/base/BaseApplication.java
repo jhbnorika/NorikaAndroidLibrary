@@ -1,10 +1,10 @@
 
-package com.norika.android.library.bitmapfun.base;
+package com.norika.android.library.base;
 
 import android.app.Application;
 
 import com.norika.android.library.BuildConfig;
-import com.norika.android.library.bitmapfun.util.Utils;
+import com.norika.android.library.utils.Utils;
 
 public class BaseApplication extends Application {
 

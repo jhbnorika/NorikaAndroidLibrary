@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name_lan">NorikaAndroidLibrary</string>
+    <!-- common -->
+    <string name="no_network_connection_toast_lan">No network connection found</string>
+    <string name="cancel_lan">Cancel</string>
+    <string name="confirm_lan">OK</string>
+    <!-- beauty dialog -->
+    <string name="dialog_prompt_lan">Prompt</string>
+    <string name="dialog_prompt_hint_lan">Prompt Detail</string>
+    <string name="dialog_not_alert_lan">Not Alert No Longer</string>
+
+</resources>

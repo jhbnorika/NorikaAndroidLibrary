@@ -19,6 +19,10 @@ public class ITextUtil {
     /** 简易年月日正则 */
     private static final String REGULAR_YYYY_MM_DD = "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}";
 
+    private ITextUtil() {
+
+    }
+
     /**
      * Determine whether it is a valid charSequence
      * 

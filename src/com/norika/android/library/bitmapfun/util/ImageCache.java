@@ -47,6 +47,7 @@ import android.support.v4.util.LruCache;
 import android.util.Log;
 
 import com.norika.android.library.BuildConfig;
+import com.norika.android.library.utils.Utils;
 
 /**
  * This class handles disk and memory caching of bitmaps in conjunction with the

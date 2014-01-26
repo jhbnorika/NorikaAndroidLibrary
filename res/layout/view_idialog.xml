@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_idialog"
+    android:padding="5dp" >
+
+    <!-- 为何使用RelativeLayout嵌在外面，可以保证全屏撑满显示 -->
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:drawableLeft="@drawable/dialog_about"
+        android:gravity="center_vertical"
+        android:text="@string/dialog_prompt"
+        android:textColor="#ff666666"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/dialog_margin"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/dialog_title"
+        android:background="#ff666666" />
+
+    <LinearLayout
+        android:id="@+id/beauty_dialog_contents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_margin"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/bg_in_idialog"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/dialog_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/dialog_prompt_hint"
+            android:maxLines="7"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/dialog_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:checked="false"
+            android:gravity="center_vertical"
+            android:text="@string/dialog_not_alert"
+            android:textColor="#ff1E3E3E"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/beauty_dialog_contents"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_bottom_idialog"
+        android:orientation="horizontal"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/dialog_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dialog_cancel"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/dialog_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dialog_confirm"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/confirm"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

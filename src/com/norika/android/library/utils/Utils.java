@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.norika.android.library.bitmapfun.util;
+package com.norika.android.library.utils;
 
 import android.annotation.TargetApi;
 import android.os.Build;

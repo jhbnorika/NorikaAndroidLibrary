@@ -32,6 +32,8 @@ import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.norika.android.library.utils.Utils;
+
 import android.annotation.TargetApi;
 import android.os.Handler;
 import android.os.Message;
