@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.norika.android.library.R;
 import com.norika.android.library.utils.ITextUtil;
+import com.norika.android.library.utils.OffsetUtils;
 
 public class IDialog extends Dialog implements OnClickListener, CheckBox.OnCheckedChangeListener {
     private final TextView btnOk, btnCancel, tvDetail, tvTitle;

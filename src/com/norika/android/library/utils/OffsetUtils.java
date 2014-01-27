@@ -1,9 +1,8 @@
 
-package com.norika.android.library.view;
+package com.norika.android.library.utils;
 
 import android.widget.TextView;
 
-import com.norika.android.library.utils.Utils;
 
 public class OffsetUtils {
 

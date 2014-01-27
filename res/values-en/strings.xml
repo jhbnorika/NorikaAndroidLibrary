@@ -6,6 +6,7 @@
     <string name="no_network_connection_toast_lan">No network connection found</string>
     <string name="cancel_lan">Cancel</string>
     <string name="confirm_lan">OK</string>
+    <string name="loading_lan">loading....</string>
     <!-- beauty dialog -->
     <string name="dialog_prompt_lan">Prompt</string>
     <string name="dialog_prompt_hint_lan">Prompt Detail</string>

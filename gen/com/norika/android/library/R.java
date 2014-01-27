@@ -14,42 +14,50 @@ public final class R {
         public static int bg_bottom_idialog=0x7f020000;
         public static int bg_idialog=0x7f020001;
         public static int bg_in_idialog=0x7f020002;
-        public static int btn_dialog_cancel=0x7f020003;
-        public static int btn_dialog_confirm=0x7f020004;
-        public static int dialog_about=0x7f020005;
-        public static int ic_launcher=0x7f020006;
+        public static int bg_toast=0x7f020003;
+        public static int btn_dialog_cancel=0x7f020004;
+        public static int btn_dialog_confirm=0x7f020005;
+        public static int dialog_about=0x7f020006;
+        public static int ic_launcher=0x7f020007;
     }
     public static final class id {
-        public static int beauty_dialog_contents=0x7f060002;
-        public static int dialog_btn=0x7f060005;
-        public static int dialog_cancel=0x7f060006;
-        public static int dialog_checkbox=0x7f060004;
-        public static int dialog_detail=0x7f060003;
-        public static int dialog_margin=0x7f060001;
-        public static int dialog_ok=0x7f060007;
-        public static int dialog_title=0x7f060000;
+        public static int beauty_dialog_contents=0x7f060004;
+        public static int dialog_btn=0x7f060007;
+        public static int dialog_cancel=0x7f060008;
+        public static int dialog_checkbox=0x7f060006;
+        public static int dialog_detail=0x7f060005;
+        public static int dialog_margin=0x7f060003;
+        public static int dialog_ok=0x7f060009;
+        public static int dialog_title=0x7f060002;
+        public static int pb_loading=0x7f060000;
+        public static int tv_loading=0x7f060001;
+        public static int tv_popwindow=0x7f06000a;
     }
     public static final class layout {
-        public static int view_idialog=0x7f030000;
+        public static int toast_loading=0x7f030000;
+        public static int view_idialog=0x7f030001;
+        public static int view_popwindow=0x7f030002;
     }
     public static final class string {
         public static int app_name=0x7f040000;
-        public static int app_name_lan=0x7f04000d;
-        public static int cancel=0x7f040005;
+        public static int app_name_lan=0x7f04000f;
+        public static int cancel=0x7f040006;
         public static int cancel_lan=0x7f040002;
-        public static int confirm=0x7f040006;
+        public static int confirm=0x7f040007;
         public static int confirm_lan=0x7f040003;
-        public static int dialog_not_alert=0x7f04000c;
-        public static int dialog_not_alert_lan=0x7f040009;
-        public static int dialog_prompt=0x7f04000a;
-        public static int dialog_prompt_hint=0x7f04000b;
-        public static int dialog_prompt_hint_lan=0x7f040008;
+        public static int dialog_not_alert=0x7f04000e;
+        public static int dialog_not_alert_lan=0x7f04000b;
+        public static int dialog_prompt=0x7f04000c;
+        public static int dialog_prompt_hint=0x7f04000d;
+        public static int dialog_prompt_hint_lan=0x7f04000a;
         /**  beauty dialog 
  beauty dialog 
  beauty dialog 
          */
-        public static int dialog_prompt_lan=0x7f040007;
-        public static int no_network_connection_toast=0x7f040004;
+        public static int dialog_prompt_lan=0x7f040009;
+        public static int loading=0x7f040008;
+        public static int loading_lan=0x7f040004;
+        public static int no_network_connection_toast=0x7f040005;
         /**  common 
  common 
  common 

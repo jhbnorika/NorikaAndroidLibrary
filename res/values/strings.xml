@@ -6,9 +6,11 @@
     <string name="no_network_connection_toast_lan">无效的网络</string>
     <string name="cancel_lan">取消</string>
     <string name="confirm_lan">确认</string>
+    <string name="loading_lan">加载中....</string>
     <string name="no_network_connection_toast">@string/no_network_connection_toast_lan</string>
     <string name="cancel">@string/cancel_lan</string>
     <string name="confirm">@string/confirm_lan</string>
+    <string name="loading">@string/loading_lan</string>
     <!-- beauty dialog -->
     <string name="dialog_prompt_lan">提示</string>
     <string name="dialog_prompt_hint_lan">提示详情</string>
