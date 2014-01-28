@@ -8,7 +8,34 @@
 package com.norika.android.library;
 
 public final class R {
+    public static final class anim {
+        public static int i_in_bottom=0x7f040000;
+        public static int i_in_left=0x7f040001;
+        public static int i_in_right=0x7f040002;
+        public static int i_in_up=0x7f040003;
+        public static int i_layout_fade_in=0x7f040004;
+        public static int i_layout_fade_out=0x7f040005;
+        public static int i_out_bottom=0x7f040006;
+        public static int i_out_left=0x7f040007;
+        public static int i_out_right=0x7f040008;
+        public static int i_out_up=0x7f040009;
+    }
     public static final class attr {
+    }
+    public static final class color {
+        public static int i_blue_dark=0x7f050001;
+        /**  from https://developer.android.com/design/style/color.html Recommend Base Colors 
+         */
+        public static int i_blue_light=0x7f050000;
+        public static int i_green_dark=0x7f050005;
+        public static int i_green_light=0x7f050004;
+        public static int i_orange_dark=0x7f050007;
+        public static int i_orange_light=0x7f050006;
+        public static int i_purple_dark=0x7f050003;
+        public static int i_purple_light=0x7f050002;
+        public static int i_red_dark=0x7f050009;
+        public static int i_red_light=0x7f050008;
+        public static int i_selector_base=0x7f05000a;
     }
     public static final class drawable {
         public static int bg_bottom_idialog=0x7f020000;
@@ -21,17 +48,17 @@ public final class R {
         public static int ic_launcher=0x7f020007;
     }
     public static final class id {
-        public static int beauty_dialog_contents=0x7f060004;
-        public static int dialog_btn=0x7f060007;
-        public static int dialog_cancel=0x7f060008;
-        public static int dialog_checkbox=0x7f060006;
-        public static int dialog_detail=0x7f060005;
-        public static int dialog_margin=0x7f060003;
-        public static int dialog_ok=0x7f060009;
-        public static int dialog_title=0x7f060002;
-        public static int pb_loading=0x7f060000;
-        public static int tv_loading=0x7f060001;
-        public static int tv_popwindow=0x7f06000a;
+        public static int beauty_dialog_contents=0x7f080004;
+        public static int dialog_btn=0x7f080007;
+        public static int dialog_cancel=0x7f080008;
+        public static int dialog_checkbox=0x7f080006;
+        public static int dialog_detail=0x7f080005;
+        public static int dialog_margin=0x7f080003;
+        public static int dialog_ok=0x7f080009;
+        public static int dialog_title=0x7f080002;
+        public static int pb_loading=0x7f080000;
+        public static int tv_loading=0x7f080001;
+        public static int tv_popwindow=0x7f08000a;
     }
     public static final class layout {
         public static int toast_loading=0x7f030000;
@@ -39,30 +66,30 @@ public final class R {
         public static int view_itoast=0x7f030002;
     }
     public static final class string {
-        public static int app_name=0x7f040000;
-        public static int app_name_lan=0x7f04000f;
-        public static int cancel=0x7f040006;
-        public static int cancel_lan=0x7f040002;
-        public static int confirm=0x7f040007;
-        public static int confirm_lan=0x7f040003;
-        public static int dialog_not_alert=0x7f04000e;
-        public static int dialog_not_alert_lan=0x7f04000b;
-        public static int dialog_prompt=0x7f04000c;
-        public static int dialog_prompt_hint=0x7f04000d;
-        public static int dialog_prompt_hint_lan=0x7f04000a;
+        public static int app_name=0x7f060000;
+        public static int app_name_lan=0x7f06000f;
+        public static int cancel=0x7f060006;
+        public static int cancel_lan=0x7f060002;
+        public static int confirm=0x7f060007;
+        public static int confirm_lan=0x7f060003;
+        public static int dialog_not_alert=0x7f06000e;
+        public static int dialog_not_alert_lan=0x7f06000b;
+        public static int dialog_prompt=0x7f06000c;
+        public static int dialog_prompt_hint=0x7f06000d;
+        public static int dialog_prompt_hint_lan=0x7f06000a;
         /**  beauty dialog 
  beauty dialog 
  beauty dialog 
          */
-        public static int dialog_prompt_lan=0x7f040009;
-        public static int loading=0x7f040008;
-        public static int loading_lan=0x7f040004;
-        public static int no_network_connection_toast=0x7f040005;
+        public static int dialog_prompt_lan=0x7f060009;
+        public static int loading=0x7f060008;
+        public static int loading_lan=0x7f060004;
+        public static int no_network_connection_toast=0x7f060005;
         /**  common 
  common 
  common 
          */
-        public static int no_network_connection_toast_lan=0x7f040001;
+        public static int no_network_connection_toast_lan=0x7f060001;
     }
     public static final class style {
         /** 
@@ -86,10 +113,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static int AppBaseTheme=0x7f050000;
+        public static int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static int AppTheme=0x7f050001;
+        public static int AppTheme=0x7f070001;
     }
 }
