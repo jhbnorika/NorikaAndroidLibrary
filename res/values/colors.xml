@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- from https://developer.android.com/design/style/color.html Recommend Base Colors -->
+    <color name="i_blue_light">#ff33B5E5</color>
+    <color name="i_blue_dark">#ff0099CC</color>
+    <color name="i_purple_light">#ffAA66CC</color>
+    <color name="i_purple_dark">#ff9933CC</color>
+    <color name="i_green_light">#ff99CC00</color>
+    <color name="i_green_dark">#ff669900</color>
+    <color name="i_orange_light">#ffFFBB33</color>
+    <color name="i_orange_dark">#ffFF8800</color>
+    <color name="i_red_light">#ffFF4444</color>
+    <color name="i_red_dark">#ffCC0000</color>
+
+</resources>
