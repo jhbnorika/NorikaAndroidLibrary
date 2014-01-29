@@ -16,6 +16,8 @@ public class BaseApplication extends Application {
 
         if (BuildConfig.DEBUG)
             Utils.enableStrictMode();
+
+        _instance = this;
     }
 
     public static Application getInstance() {
