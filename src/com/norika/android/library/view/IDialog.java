@@ -26,7 +26,7 @@ public class IDialog extends Dialog implements OnClickListener, CheckBox.OnCheck
         super(context);
         // super(context, R.style.BeautyDialog);
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.view_idialog);
+        setContentView(R.layout.i_view_idialog);
 
         tvTitle = (TextView) findViewById(R.id.dialog_title);
         OffsetUtils.FakeBoldText(tvTitle);

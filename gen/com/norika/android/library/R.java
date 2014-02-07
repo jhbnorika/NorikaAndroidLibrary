@@ -45,25 +45,33 @@ public final class R {
         public static int btn_dialog_cancel=0x7f020004;
         public static int btn_dialog_confirm=0x7f020005;
         public static int dialog_about=0x7f020006;
-        public static int ic_launcher=0x7f020007;
+        public static int i_bg_neterror=0x7f020007;
+        public static int ic_launcher=0x7f020008;
     }
     public static final class id {
-        public static int beauty_dialog_contents=0x7f080004;
-        public static int dialog_btn=0x7f080007;
-        public static int dialog_cancel=0x7f080008;
-        public static int dialog_checkbox=0x7f080006;
-        public static int dialog_detail=0x7f080005;
-        public static int dialog_margin=0x7f080003;
-        public static int dialog_ok=0x7f080009;
-        public static int dialog_title=0x7f080002;
-        public static int pb_loading=0x7f080000;
-        public static int tv_loading=0x7f080001;
-        public static int tv_popwindow=0x7f08000a;
+        public static int beauty_dialog_contents=0x7f08000a;
+        public static int bottom_iv=0x7f080005;
+        public static int content_container=0x7f080002;
+        public static int dialog_btn=0x7f08000d;
+        public static int dialog_cancel=0x7f08000e;
+        public static int dialog_checkbox=0x7f08000c;
+        public static int dialog_detail=0x7f08000b;
+        public static int dialog_margin=0x7f080009;
+        public static int dialog_ok=0x7f08000f;
+        public static int dialog_title=0x7f080008;
+        public static int empty_tv=0x7f080003;
+        public static int pb_loading=0x7f080006;
+        public static int progress_container=0x7f080000;
+        public static int progress_text=0x7f080001;
+        public static int top_iv=0x7f080004;
+        public static int tv_loading=0x7f080007;
+        public static int tv_popwindow=0x7f080010;
     }
     public static final class layout {
-        public static int toast_loading=0x7f030000;
-        public static int view_idialog=0x7f030001;
-        public static int view_itoast=0x7f030002;
+        public static int i_fragment_progress=0x7f030000;
+        public static int i_toast_loading=0x7f030001;
+        public static int i_view_idialog=0x7f030002;
+        public static int i_view_itoast=0x7f030003;
     }
     public static final class string {
         public static int app_name=0x7f060000;

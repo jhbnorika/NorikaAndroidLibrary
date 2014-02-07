@@ -18,16 +18,18 @@ import android.preference.PreferenceManager;
  * @since 1.0
  */
 public class SharedPreferencesUtil {
-    private static SharedPreferencesUtil instance;
-    private static SharedPreferences spDefaultGlobal;
     private static SharedPreferences spGlobal;
 
     private static final String DEFAULT_SP_NAME = "i_sp_name";
 
+    private SharedPreferencesUtil() {
+
+    }
+
     /**
      * @param context {@link getApplicationContext()}
      */
-    private SharedPreferencesUtil(Context context) {
+    public static void create(Context context) {
         spGlobal = PreferenceManager.getDefaultSharedPreferences(context);
         spGlobal = context.getSharedPreferences(DEFAULT_SP_NAME, Context.MODE_PRIVATE);
     }
@@ -53,5 +55,9 @@ public class SharedPreferencesUtil {
      */
     public static boolean saveString(String key, String value) {
         return spGlobal.edit().putString(key, value).commit();
+    }
+
+    public static String getString(String key) {
+        return spGlobal.getString(key, null);
     }
 }

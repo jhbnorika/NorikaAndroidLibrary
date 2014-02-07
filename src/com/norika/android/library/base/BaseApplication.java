@@ -4,6 +4,7 @@ package com.norika.android.library.base;
 import android.app.Application;
 
 import com.norika.android.library.BuildConfig;
+import com.norika.android.library.utils.SharedPreferencesUtil;
 import com.norika.android.library.utils.Utils;
 
 public class BaseApplication extends Application {
@@ -18,6 +19,8 @@ public class BaseApplication extends Application {
             Utils.enableStrictMode();
 
         _instance = this;
+
+        SharedPreferencesUtil.create(this);
     }
 
     public static Application getInstance() {

@@ -1,6 +1,8 @@
 
 package com.norika.android.library.base;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
@@ -40,6 +42,17 @@ public abstract class BaseActivity extends FragmentActivity {
         super.onSaveInstanceState(outState);
         if (mSavedState != null)
             outState.putAll(mSavedState);
+    }
+
+    /**
+     * Intent跳转
+     * 
+     * @param c
+     * @param b
+     * @return
+     */
+    public static Intent getLaunchIntent(Context c, Bundle b) {
+        return null;
     }
 
     private Bundle mSavedState;

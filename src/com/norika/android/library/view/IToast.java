@@ -43,7 +43,7 @@ public class IToast {
 
     public IToast(Context context) {
         View view = LayoutInflater.from(context).inflate(
-                R.layout.view_itoast, null);
+                R.layout.i_view_itoast, null);
         tvDetail = (TextView) view.findViewById(R.id.tv_popwindow);
 
         toast = new Toast(BaseApplication.getInstance());
