@@ -60,4 +60,8 @@ public class SharedPreferencesUtil {
     public static String getString(String key) {
         return spGlobal.getString(key, null);
     }
+
+    public static class SPKeys {
+        public static final String KEY_UUID = "uuid-only";
+    }
 }

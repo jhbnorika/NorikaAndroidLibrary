@@ -1,7 +1,7 @@
 
 package com.norika.android.library.http;
 
-public abstract class HttpCallback<T> {
+public abstract class HttpCallback<T> extends AbstractCallback<T, HttpCallback<T>> {
     public static final int HTTP_500 = 500;
     public static final int HTTP_200 = 200;
     public static final int HTTP_404 = 404;
