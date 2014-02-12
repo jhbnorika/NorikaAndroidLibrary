@@ -12,7 +12,12 @@ import com.norika.android.library.BuildConfig;
 public class DebugUtil {
     private static final String DEFAULT_TAG = DebugUtil.class.getSimpleName();
 
-    private final static int DEBUG_SIGNATURE_HASH = -545290802;
+    private final int DEBUG_SIGNATURE_HASH = -545290802;
+    private final int ONLINE_SIGNATURE_HASH = -972500024;
+    /** 签名是否合法（包含DEBUG和线上版） */
+    private final boolean isAllowedKey = false;
+
+    private boolean isDebug = false;
 
     private static final boolean DEBUG = Log.isLoggable(DEFAULT_TAG, Log.VERBOSE);
 
@@ -27,15 +32,23 @@ public class DebugUtil {
      * @param context 建议Application启动调用
      * @return
      */
-    public boolean isDebugBuild(Context context) {
+    public void debugAccess(Context context) {
         try {
             Signature[] sigs = context.getPackageManager().getPackageInfo(context.getPackageName(),
                     PackageManager.GET_SIGNATURES).signatures;
-            for (int i = 0; i < sigs.length; i++) {
-                Log.v(DEFAULT_TAG, "sign[" + i + "] hash: " + sigs[i].hashCode());
-                if (sigs[i].hashCode() == DEBUG_SIGNATURE_HASH) {
+            int i = 0;
+            for (Signature sig : sigs) {
+                Log.v(DEFAULT_TAG, "sign[" + i++ + "] hash: " + sig.hashCode());
+                if (sig.hashCode() == DEBUG_SIGNATURE_HASH) {
                     Log.d(DEFAULT_TAG, "This is a debug build!");
-                    return true;
+                    isDebug = true;
+                    isAllowedKey = true;
+                    continue;
+                }
+
+                if (sig.hashCode() == ONLINE_SIGNATURE_HASH) {
+                    isAllowedKey = true;
+                    continue;
                 }
             }
         } catch (NameNotFoundException e) {

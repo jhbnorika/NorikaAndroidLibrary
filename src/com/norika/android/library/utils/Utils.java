@@ -17,7 +17,7 @@
 package com.norika.android.library.utils;
 
 import android.annotation.TargetApi;
-import android.os.Build;
+import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.StrictMode;
 
@@ -58,20 +58,58 @@ public class Utils {
         }
     }
 
+    /**
+     * 关闭StrickMode
+     */
+    @TargetApi(VERSION_CODES.GINGERBREAD)
+    public static void disableStrictMode() {
+        if (hasGingerbread()) {
+            StrictMode.ThreadPolicy.Builder threadPolicyBuilder =
+                    new StrictMode.ThreadPolicy.Builder()
+                            .permitAll()
+                            .penaltyLog();
+
+            StrictMode.setThreadPolicy(threadPolicyBuilder.build());
+        }
+    }
+
+    /**
+     * SDK 5 Android 2.0
+     * 
+     * @return
+     */
+    public static boolean hasEclair() {
+        return VERSION.SDK_INT >= VERSION_CODES.ECLAIR;
+    }
+
+    /**
+     * SDK 7 Android 2.1
+     * 
+     * @return
+     */
+    public static boolean hasEclairMR1() {
+        return VERSION.SDK_INT >= VERSION_CODES.ECLAIR_MR1;
+    }
+
+    /**
+     * SDK 8 Android 2.2
+     * 
+     * @return
+     */
     public static boolean hasFroyo() {
         // Can use static final constants like FROYO, declared in later versions
         // of the OS since they are inlined at compile time. This is guaranteed
         // behavior.
-        return Build.VERSION.SDK_INT >= VERSION_CODES.FROYO;
+        return VERSION.SDK_INT >= VERSION_CODES.FROYO;
     }
 
     /**
-     * SDK 9 Android 2.3
+     * SDK 9 Android 2.3.1
      * 
      * @return
      */
     public static boolean hasGingerbread() {
-        return Build.VERSION.SDK_INT >= VERSION_CODES.GINGERBREAD;
+        return VERSION.SDK_INT >= VERSION_CODES.GINGERBREAD;
     }
 
     /**
@@ -80,7 +118,7 @@ public class Utils {
      * @return
      */
     public static boolean hasHoneycomb() {
-        return Build.VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB;
+        return VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB;
     }
 
     /**
@@ -89,7 +127,25 @@ public class Utils {
      * @return
      */
     public static boolean hasHoneycombMR1() {
-        return Build.VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB_MR1;
+        return VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB_MR1;
+    }
+
+    /**
+     * SDK 13 Android 3.2
+     * 
+     * @return
+     */
+    public static boolean hasHoneycombMR2() {
+        return VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB_MR2;
+    }
+
+    /**
+     * SDK 13 Android 3.2
+     * 
+     * @return
+     */
+    public static boolean hasIceCreamSandwich() {
+        return VERSION.SDK_INT >= VERSION_CODES.ICE_CREAM_SANDWICH;
     }
 
     /**
@@ -98,7 +154,16 @@ public class Utils {
      * @return
      */
     public static boolean hasJellyBean() {
-        return Build.VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN;
+        return VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN;
+    }
+
+    /**
+     * SDK 17 Android 4.2
+     * 
+     * @return
+     */
+    public static boolean hasJellyBean4_2() {
+        return VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN;
     }
 
     /**
@@ -107,6 +172,6 @@ public class Utils {
      * @return
      */
     public static boolean hasKitKat() {
-        return Build.VERSION.SDK_INT >= VERSION_CODES.KITKAT;
+        return VERSION.SDK_INT >= VERSION_CODES.KITKAT;
     }
 }

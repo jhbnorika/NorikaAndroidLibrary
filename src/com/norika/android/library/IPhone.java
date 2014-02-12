@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
 
+import com.norika.android.library.share.CommValue;
+import com.norika.android.library.utils.DebugUtil;
 import com.norika.android.library.utils.ITextUtil;
 import com.norika.android.library.utils.MD5Util;
 import com.norika.android.library.utils.SharedPreferencesUtil;
@@ -100,7 +102,7 @@ public class IPhone {
         if (info != null) {
             // APP版本(AppVer)
             sAppVer = info.versionName;
-            // APP内部版本(VersionCode)
+            // APP内部版本号(VersionCode)
             sVersionCode = info.versionCode;
         }
 
@@ -137,6 +139,8 @@ public class IPhone {
         sPhoneNum = getPhoneNum(context);
 
         isPhoneOk = true;
+
+        log();
     }
 
     /**
@@ -368,4 +372,14 @@ public class IPhone {
         return sSource;
     }
 
+    private static void log() {
+        int length = sUmengKey.length();
+        int start = length >= 6 ? length - 6 : 0;
+        String umeng = sUmengKey.substring(start, length);
+
+        String umengVer = "内部版本号：" + sVersionCode + "\r\n渠道号："
+                + sAppPM + "\r\n友盟: " + umeng + "\r\napi版本号："
+                + "暂未设定";
+        DebugUtil.d(CommValue.INNER_LOG_TAG, umengVer);
+    }
 }
