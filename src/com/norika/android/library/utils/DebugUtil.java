@@ -10,9 +10,11 @@ import android.util.Log;
 import com.norika.android.library.BuildConfig;
 
 public class DebugUtil {
-    private static final String defaltTag = DebugUtil.class.getName();
+    private static final String DEFAULT_TAG = DebugUtil.class.getSimpleName();
 
     private final static int DEBUG_SIGNATURE_HASH = -545290802;
+
+    private static final boolean DEBUG = Log.isLoggable(DEFAULT_TAG, Log.VERBOSE);
 
     private DebugUtil() {
 
@@ -30,12 +32,11 @@ public class DebugUtil {
             Signature[] sigs = context.getPackageManager().getPackageInfo(context.getPackageName(),
                     PackageManager.GET_SIGNATURES).signatures;
             for (int i = 0; i < sigs.length; i++) {
-                Log.v(defaltTag, "sign[" + i + "] hash: " + sigs[i].hashCode());
+                Log.v(DEFAULT_TAG, "sign[" + i + "] hash: " + sigs[i].hashCode());
                 if (sigs[i].hashCode() == DEBUG_SIGNATURE_HASH) {
-                    Log.d(defaltTag, "This is a debug build!");
+                    Log.d(DEFAULT_TAG, "This is a debug build!");
                     return true;
                 }
-                Log.v("norika", " hashCode = " + sigs[i].hashCode());
             }
         } catch (NameNotFoundException e) {
             e.printStackTrace();
@@ -45,53 +46,58 @@ public class DebugUtil {
     }
 
     public static void d(String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.DEBUG))
-            Log.d(defaltTag, text);
+        if (BuildConfig.DEBUG)
+            Log.d(DEFAULT_TAG, text);
     }
 
     public static void w(String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.WARN))
-            Log.w(defaltTag, text);
+        if (BuildConfig.DEBUG)
+            Log.w(DEFAULT_TAG, text);
     }
 
     public static void v(String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.VERBOSE))
-            Log.v(defaltTag, text);
+        if (BuildConfig.DEBUG)
+            Log.v(DEFAULT_TAG, text);
     }
 
     public static void i(String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.INFO))
-            Log.i(defaltTag, text);
+        if (BuildConfig.DEBUG)
+            Log.i(DEFAULT_TAG, text);
     }
 
     public static void e(String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.ERROR))
-            Log.e(defaltTag, text);
+        if (BuildConfig.DEBUG)
+            Log.e(DEFAULT_TAG, text);
     }
 
     public static void d(String tag, String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.DEBUG))
+        if (BuildConfig.DEBUG)
             Log.d(tag, text);
     }
 
     public static void v(String tag, String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.VERBOSE))
+        if (BuildConfig.DEBUG)
             Log.v(tag, text);
     }
 
     public static void i(String tag, String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.INFO))
+        if (BuildConfig.DEBUG)
             Log.i(tag, text);
     }
 
     public static void e(String tag, String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.ERROR))
+        if (BuildConfig.DEBUG)
             Log.e(tag, text);
     }
 
     public static void w(String tag, String text) {
-        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.WARN))
+        if (BuildConfig.DEBUG)
             Log.w(tag, text);
+    }
+
+    public static void iv(String tag, String text) {
+        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.VERBOSE))
+            Log.v(tag, text);
     }
 
 }

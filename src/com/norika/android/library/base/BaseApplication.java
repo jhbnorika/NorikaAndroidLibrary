@@ -14,12 +14,14 @@ import com.norika.android.library.utils.ITextUtil;
 import com.norika.android.library.utils.SharedPreferencesUtil;
 import com.norika.android.library.utils.Utils;
 
-public class BaseApplication extends Application {
-    private final RequestQueue mRequestQueue = Volley.newRequestQueue(getApplicationContext());
+public abstract class BaseApplication extends Application {
+    private RequestQueue mRequestQueue;
 
     @Override
     public void onCreate() {
         super.onCreate();
+
+        mRequestQueue = Volley.newRequestQueue(getApplicationContext());
 
         if (BuildConfig.DEBUG)
             Utils.enableStrictMode();
@@ -31,7 +33,7 @@ public class BaseApplication extends Application {
 
     public <T> void addRequest(Request<T> req, String tag) {
         req.setTag(ITextUtil.isValidText(tag) ? tag : "volleypatterns");
-        VolleyLog.e("", "");
+        VolleyLog.d("addRequest", "addRequest");
         mRequestQueue.add(req);
     }
 
