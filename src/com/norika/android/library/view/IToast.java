@@ -9,7 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.norika.android.library.R;
-import com.norika.android.library.base.BaseApplication;
 
 /**
  * Toast弹出框
@@ -46,7 +45,7 @@ public class IToast {
                 R.layout.i_view_itoast, null);
         tvDetail = (TextView) view.findViewById(R.id.tv_popwindow);
 
-        toast = new Toast(BaseApplication.getInstance());
+        toast = new Toast(context);
         toast.setView(view);
     }
 

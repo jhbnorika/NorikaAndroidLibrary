@@ -11,6 +11,8 @@ public class HttpStatus {
     private String status;
     private String error;
 
+    private boolean done;
+
     public int getCode() {
         return code;
     }
@@ -35,4 +37,16 @@ public class HttpStatus {
         this.error = error;
     }
 
+    public boolean isDone() {
+        return done;
+    }
+
+    public HttpStatus done() {
+        this.done = true;
+        return this;
+    }
+
+    public void reset() {
+        done = false;
+    }
 }

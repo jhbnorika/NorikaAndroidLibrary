@@ -10,6 +10,7 @@ public abstract class AbstractCallback<T, K> implements Runnable {
     private String url;
     private Map<String, String> headers;
     private static int NETWORK_POOL = 4;
+    private HttpStatus status;
 
     private K self() {
         return (K) this;
@@ -33,16 +34,37 @@ public abstract class AbstractCallback<T, K> implements Runnable {
     }
 
     public void async() {
+        if (status == null)
+            status = new HttpStatus();
+        else if (status.isDone())
+            status.reset();
+
         work();
     }
 
     @Override
     public void run() {
+        if (status.isDone()) {
+            afterwork();
+            return;
+        }
+        if (url == null) {
+            status.setCode(HttpStatus.NETWORK_ERROR);
+            status.done();
+            return;
+        }
+    }
+
+    private void netRequest() {
 
     }
 
     private void work() {
         execute(this);
+    }
+
+    private void afterwork() {
+
     }
 
     private static ExecutorService fetchExe;
@@ -52,5 +74,12 @@ public abstract class AbstractCallback<T, K> implements Runnable {
             fetchExe = Executors.newFixedThreadPool(NETWORK_POOL);
 
         fetchExe.execute(job);
+    }
+
+    public static void cancel() {
+        if (fetchExe != null) {
+            fetchExe.shutdown();
+            fetchExe = null;
+        }
     }
 }

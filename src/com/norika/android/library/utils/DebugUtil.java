@@ -45,52 +45,52 @@ public class DebugUtil {
     }
 
     public static void d(String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.DEBUG))
             Log.d(defaltTag, text);
     }
 
     public static void w(String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.WARN))
             Log.w(defaltTag, text);
     }
 
     public static void v(String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.VERBOSE))
             Log.v(defaltTag, text);
     }
 
     public static void i(String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.INFO))
             Log.i(defaltTag, text);
     }
 
     public static void e(String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(defaltTag, Log.ERROR))
             Log.e(defaltTag, text);
     }
 
     public static void d(String tag, String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.DEBUG))
             Log.d(tag, text);
     }
 
     public static void v(String tag, String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.VERBOSE))
             Log.v(tag, text);
     }
 
     public static void i(String tag, String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.INFO))
             Log.i(tag, text);
     }
 
     public static void e(String tag, String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.ERROR))
             Log.e(tag, text);
     }
 
     public static void w(String tag, String text) {
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG && Log.isLoggable(tag, Log.WARN))
             Log.w(tag, text);
     }
 
