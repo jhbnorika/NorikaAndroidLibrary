@@ -15,7 +15,7 @@ public class DebugUtil {
     private final int DEBUG_SIGNATURE_HASH = -545290802;
     private final int ONLINE_SIGNATURE_HASH = -972500024;
     /** 签名是否合法（包含DEBUG和线上版） */
-    private final boolean isAllowedKey = false;
+    private boolean isAllowedKey = false;
 
     private boolean isDebug = false;
 
@@ -54,8 +54,14 @@ public class DebugUtil {
         } catch (NameNotFoundException e) {
             e.printStackTrace();
         }
+    }
 
-        return false;
+    public boolean isAllowedKey() {
+        return isAllowedKey;
+    }
+
+    public boolean isDebug() {
+        return isDebug;
     }
 
     public static void d(String text) {
