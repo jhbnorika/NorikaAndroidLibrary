@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_idialog"
+    android:background="@drawable/shape_bg_idialog"
     android:padding="5dp" >
 
     <!-- 为何使用RelativeLayout嵌在外面，可以保证全屏撑满显示 -->
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/dialog_margin"
         android:layout_marginTop="5dip"
-        android:background="@drawable/bg_in_idialog"
+        android:background="@drawable/shape_bg_in_idialog"
         android:orientation="vertical"
         android:paddingBottom="5dp"
         android:paddingLeft="10dp"
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/beauty_dialog_contents"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/bg_bottom_idialog"
+        android:background="@drawable/shape_bg_bottom_idialog"
         android:orientation="horizontal"
         android:paddingTop="5dp" >
 
@@ -80,7 +80,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/btn_dialog_cancel"
+            android:background="@drawable/selector_btn_dialog_cancel"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/cancel"
@@ -92,7 +92,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/btn_dialog_confirm"
+            android:background="@drawable/selector_btn_dialog_confirm"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/confirm"

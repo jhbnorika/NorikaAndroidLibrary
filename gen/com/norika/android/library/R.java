@@ -38,17 +38,20 @@ public final class R {
         public static int i_selector_base=0x7f05000a;
     }
     public static final class drawable {
-        public static int bg_bottom_idialog=0x7f020000;
-        public static int bg_idialog=0x7f020001;
-        public static int bg_in_idialog=0x7f020002;
-        public static int bg_toast=0x7f020003;
-        public static int btn_dialog_cancel=0x7f020004;
-        public static int btn_dialog_confirm=0x7f020005;
-        public static int dialog_about=0x7f020006;
-        public static int i_bg_neterror=0x7f020007;
-        public static int ic_launcher=0x7f020008;
+        public static int dialog_about=0x7f020000;
+        public static int i_bg_neterror=0x7f020001;
+        public static int ic_launcher=0x7f020002;
+        public static int layer_bg_devider=0x7f020003;
+        public static int layer_bg_seekbar=0x7f020004;
+        public static int selector_btn_dialog_cancel=0x7f020005;
+        public static int selector_btn_dialog_confirm=0x7f020006;
+        public static int shape_bg_bottom_idialog=0x7f020007;
+        public static int shape_bg_idialog=0x7f020008;
+        public static int shape_bg_in_idialog=0x7f020009;
+        public static int shape_bg_toast=0x7f02000a;
     }
     public static final class id {
+        public static int SecondaryProgress=0x01010000;
         public static int beauty_dialog_contents=0x7f08000a;
         public static int bottom_iv=0x7f080005;
         public static int content_container=0x7f080002;

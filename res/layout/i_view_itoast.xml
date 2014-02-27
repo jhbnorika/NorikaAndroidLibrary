@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_toast"
+    android:background="@drawable/shape_bg_toast"
     android:gravity="center"
     android:orientation="horizontal"
     android:padding="10dp" >
