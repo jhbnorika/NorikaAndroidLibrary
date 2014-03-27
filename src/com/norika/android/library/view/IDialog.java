@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.norika.android.library.R;
 import com.norika.android.library.utils.ITextUtil;
-import com.norika.android.library.utils.OffsetUtils;
+import com.norika.android.library.utils.SysMakeUpUtil;
 
 public class IDialog extends Dialog implements OnClickListener, CheckBox.OnCheckedChangeListener {
     private final TextView btnOk, btnCancel, tvDetail, tvTitle;
@@ -29,7 +29,7 @@ public class IDialog extends Dialog implements OnClickListener, CheckBox.OnCheck
         setContentView(R.layout.i_view_idialog);
 
         tvTitle = (TextView) findViewById(R.id.dialog_title);
-        OffsetUtils.FakeBoldText(tvTitle);
+        SysMakeUpUtil.FakeBoldText(tvTitle);
         sepLine = findViewById(R.id.dialog_margin);
         tvDetail = (TextView) findViewById(R.id.dialog_detail);
         // 超过一定行数，自动滚动

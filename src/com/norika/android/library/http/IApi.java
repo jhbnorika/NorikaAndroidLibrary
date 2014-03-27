@@ -5,6 +5,13 @@ import java.util.Map;
 
 import com.norika.android.library.utils.DateUtil;
 
+/**
+ * 不利方面，版本升级策略
+ * 
+ * @author Norika
+ * @version 1.0
+ * @since 1.0
+ */
 public class IApi {
 
     private static final String HOST_URL = "http://fake_url";

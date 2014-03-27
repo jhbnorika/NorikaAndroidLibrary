@@ -19,7 +19,7 @@ public class MD5Util {
 
         MessageDigest md5 = null;
         try {
-            md5 = MessageDigest.getInstance("MD5");
+            md5 = MessageDigest.getInstance(ALGORITHM_MD5);
         } catch (Exception e) {
             e.printStackTrace();
             return "";
@@ -68,7 +68,7 @@ public class MD5Util {
             return "";
 
         try {
-            MessageDigest md5 = MessageDigest.getInstance("MD5");
+            MessageDigest md5 = MessageDigest.getInstance(ALGORITHM_MD5);
             char[] HEX = {
                     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'
             };
@@ -87,4 +87,6 @@ public class MD5Util {
             return "";
         }
     }
+
+    public static final String ALGORITHM_MD5 = "MD5";
 }

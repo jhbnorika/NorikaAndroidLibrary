@@ -1,6 +1,8 @@
 
 package com.norika.android.library.utils;
 
+import java.util.Map;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 public class ITextUtil {
@@ -310,5 +312,19 @@ public class ITextUtil {
         public void setError(String error) {
             this.error = error;
         }
+    }
+
+    public static String map2Str(Map<String, String> map) {
+        StringBuilder sb = new StringBuilder("");
+        Set<String> keys = map.keySet();
+        for (String key : keys)
+            sb.append(key + ":" + map.get(key) + ", ");
+
+        String s = sb.toString().trim();
+
+        if (!s.endsWith(","))
+            return s;
+        else
+            return s.substring(0, s.lastIndexOf(",") - 1);
     }
 }

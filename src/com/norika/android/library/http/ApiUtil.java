@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.http.protocol.HTTP;
+
 import com.alibaba.fastjson.JSON;
 import com.norika.android.library.IPhone;
 import com.norika.android.library.utils.ITextUtil;
@@ -114,7 +116,7 @@ public class ApiUtil {
             return "";
 
         try {
-            return URLEncoder.encode(str, "UTF-8");
+            return URLEncoder.encode(str, HTTP.UTF_8);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             return "";
