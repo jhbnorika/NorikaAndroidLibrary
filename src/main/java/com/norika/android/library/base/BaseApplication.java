@@ -37,6 +37,8 @@ public abstract class BaseApplication<T extends BaseApplication<T>> extends Appl
         SharedPreferencesUtil.create(getApplicationContext());
 
         IPhone.init(this, "iapp");
+
+        // TODO 地图
     }
 
     public <K> void addRequest(Request<K> req, String tag) {
