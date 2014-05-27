@@ -2,8 +2,9 @@
 package com.norika.android.library.view;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -11,38 +12,50 @@ import android.graphics.PathEffect;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.norika.android.library.R;
+
 /**
  * 虚线
  * 
  * @author Norika
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  */
 public class DashedLineView extends View {
-    private final Paint paint = new Paint();
-    private final Path path = new Path();
-    private final PathEffect effects = new DashPathEffect(new float[] {
-            5, 5, 5, 5
-    }, 2);
 
-    public DashedLineView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
+    /** 代码中初始化调用 */
+    public DashedLineView(Context context) {
+        this(context, null);
     }
 
+    /** XML定义 */
+    public DashedLineView(Context context, AttributeSet attrs) {
+        this(context, attrs, R.attr.DropDownStyle);
+    }
+
+    /** 不调用，除非显示调用或系统调用 */
     public DashedLineView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init();
-    }
 
-    public DashedLineView(Context context) {
-        super(context);
-        init();
-    }
+        final Resources.Theme theme = context.getTheme();
+        TypedArray a = theme.obtainStyledAttributes(
+                attrs, R.styleable.DashedLineView, defStyle, 0);
 
-    private void init() {
+        int n = a.getIndexCount();
+        for (int i = 0; i < n; i++) {
+            int attr = a.getIndex(i);
+            switch (attr) {
+                case R.styleable.DashedLineView_lineColor:
+                    lineColor = a.getColor(attr, 0xffDEDEDE);
+                    break;
+                default:
+                    break;
+            }
+        }
+        a.recycle();
+
         paint.setStyle(Paint.Style.STROKE);
-        paint.setColor(Color.parseColor("#ffDEDEDE"));
+        paint.setColor(lineColor);
     }
 
     @Override
@@ -55,4 +68,14 @@ public class DashedLineView extends View {
         paint.setPathEffect(effects);
         canvas.drawPath(path, paint);
     }
+
+    private int lineColor = 0xffDEDEDE;
+
+    private final Paint paint = new Paint();
+    private final Path path = new Path();
+    private final PathEffect effects = new DashPathEffect(new float[] {
+            5, 5, 5, 5
+    }, 2);
+
+    private static final String TAG = DashedLineView.class.getSimpleName();
 }

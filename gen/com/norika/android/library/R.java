@@ -21,6 +21,19 @@ public final class R {
         public static int i_out_up=0x7f040009;
     }
     public static final class attr {
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static int DropDownStyle=0x7f010001;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int lineColor=0x7f010000;
     }
     public static final class color {
         public static int i_blue_dark=0x7f060001;
@@ -315,4 +328,34 @@ public final class R {
          */
         public static int AppTheme=0x7f080001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a DashedLineView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #DashedLineView_lineColor com.norika.android.library:lineColor}</code></td><td></td></tr>
+           </table>
+           @see #DashedLineView_lineColor
+         */
+        public static final int[] DashedLineView = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.norika.android.library.R.attr#lineColor}
+          attribute's value can be found in the {@link #DashedLineView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.norika.android.library:lineColor
+        */
+        public static final int DashedLineView_lineColor = 0;
+    };
 }
